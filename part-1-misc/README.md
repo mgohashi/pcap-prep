@@ -393,3 +393,191 @@ print(matches)  # Output: ['over', 'lazy', 'dog']
 ```
 
 String manipulation is a crucial aspect of working with textual data in Python. By using string methods, slicing, and regular expressions, you can perform a wide range of operations on strings, such as manipulating their contents, searching for specific patterns, extracting information, and formatting output. Understanding and utilizing these string manipulation techniques can greatly enhance your ability to process and transform text data in Python.
+
+## Math
+
+The `math` module in Python provides a wide range of mathematical functions and constants. It is part of the Python Standard Library and offers various features for performing mathematical operations. Here are some of the main features of the `math` module:
+
+1. Mathematical Constants:
+The `math` module includes constants such as pi (π) and Euler's number (e), which are commonly used in mathematical calculations.
+
+Example:
+
+```python
+import math
+
+print(math.pi)  # Output: 3.141592653589793
+print(math.e)   # Output: 2.718281828459045
+```
+
+1. Trigonometric Functions:
+The `math` module provides trigonometric functions for angles in radians, including sine, cosine, tangent, and their inverses.
+
+Example:
+
+```python
+import math
+
+angle = math.pi / 4  # 45 degrees in radians
+
+print(math.sin(angle))    # Output: 0.7071067811865476 (sine)
+print(math.cos(angle))    # Output: 0.7071067811865476 (cosine)
+print(math.tan(angle))    # Output: 1.0 (tangent)
+print(math.asin(0.5))     # Output: 0.5235987755982989 (inverse sine)
+print(math.acos(0.5))     # Output: 1.0471975511965979 (inverse cosine)
+print(math.atan(1))       # Output: 0.7853981633974483 (inverse tangent)
+```
+
+1. Exponential and Logarithmic Functions:
+The `math` module provides functions for exponential and logarithmic operations, such as raising a number to a power, calculating logarithms, and exponential functions.
+
+Example:
+
+```python
+import math
+
+print(math.exp(2))        # Output: 7.3890560989306495 (e raised to the power of 2)
+print(math.log(10))       # Output: 2.302585092994046 (natural logarithm of 10)
+print(math.log10(100))    # Output: 2.0 (base 10 logarithm of 100)
+print(math.sqrt(25))      # Output: 5.0 (square root of 25)
+```
+
+1. Mathematical Functions:
+The `math` module includes various mathematical functions, such as rounding, absolute value, factorial, and more.
+
+Example:
+
+```python
+import math
+
+print(math.ceil(4.3))       # Output: 5 (round up to the nearest integer)
+print(math.floor(4.7))      # Output: 4 (round down to the nearest integer)
+print(math.fabs(-4.5))      # Output: 4.5 (absolute value)
+print(math.factorial(5))    # Output: 120 (factorial of 5)
+print(math.abs(-5))        # Output: 5
+print(math.abs(3.14))      # Output: 3.14
+print(math.abs(-10.5))     # Output: 10.5
+print(math.abs(-2 + 3j))   # Output: 3.605551275463989
+```
+
+1. Other Functions:
+The `math` module provides additional functions for mathematical operations, including power, remainder, degrees to radians conversion, and radians to degrees conversion.
+
+Example:
+
+```python
+import math
+
+print(math.pow(2, 3))        # Output: 8.0 (2 raised to the power of 3)
+print(math.remainder(10, 3))  # Output: 1.0 (remainder of 10 divided by 3)
+print(math.degrees(math.pi))  # Output: 180.0 (convert radians to degrees)
+print(math.radians(180))      # Output: 3.141592653589793 (convert degrees to radians)
+```
+
+These are some of the main features of the `math` module in Python. It provides a wide range of mathematical functions and constants that can
+
+## Random
+
+The `random` module in Python provides functions for generating random numbers and performing random operations. It is part of the Python Standard Library and offers various features for randomization. Here are some key aspects of the `random` module:
+
+1. Generating Random Numbers:
+The `random` module allows you to generate random numbers using different functions, including:
+
+- `random()`: Returns a random floating-point number between 0 and 1 (inclusive of 0 but exclusive of 1).
+  
+  Example:
+
+  ```python
+  import random
+  
+  print(random.random())  # Output: 0.7168496849854194
+  ```
+
+- `randrange(start, stop, step)`: Returns a randomly selected element from the specified range.
+  
+  Example:
+
+  ```python
+  import random
+  
+  print(random.randrange(1, 10))       # Output: Random number between 1 and 9
+  print(random.randrange(0, 101, 5))   # Output: Random multiple of 5 between 0 and 100
+  ```
+
+- `randint(a, b)`: Returns a random integer between the two specified values, inclusive of both endpoints.
+  
+  Example:
+
+  ```python
+  import random
+  
+  print(random.randint(1, 6))  # Output: Random number between 1 and 6
+  ```
+
+1. Shuffling and Sampling:
+The `random` module provides functions for shuffling sequences randomly and sampling elements randomly.
+
+- `shuffle(sequence)`: Randomly shuffles the elements of the given sequence in place.
+  
+  Example:
+
+  ```python
+  import random
+  
+  numbers = [1, 2, 3, 4, 5]
+  random.shuffle(numbers)
+  print(numbers)  # Output: Randomly shuffled list of numbers
+  ```
+
+- `sample(population, k)`: Returns a random sample of k unique elements from the given population without replacement.
+  
+  Example:
+
+  ```python
+  import random
+  
+  numbers = [1, 2, 3, 4, 5]
+  sample = random.sample(numbers, 3)
+  print(sample)  # Output: Random sample of 3 unique numbers from the list
+  ```
+
+1. Random Choices:
+The `random` module provides functions for making random choices from a sequence or weighted choices.
+
+- `choice(sequence)`: Returns a random element from the given sequence.
+  
+  Example:
+
+  ```python
+  import random
+  
+  fruits = ['apple', 'banana', 'cherry', 'durian']
+  print(random.choice(fruits))  # Output: Randomly chosen fruit from the list
+  ```
+
+- `choices(population, weights=None, k=1)`: Returns a list of k elements randomly chosen from the population. The weights parameter allows you to specify the probability weights for each element.
+  
+  Example:
+
+  ```python
+  import random
+  
+  fruits = ['apple', 'banana', 'cherry', 'durian']
+  weights = [0.4, 0.3, 0.2, 0.1]
+  sample = random.choices(fruits, weights=weights, k=2)
+  print(sample)  # Output: Randomly chosen fruits based on weights
+  ```
+
+1. Random Seed:
+The `random` module allows you to set a random seed value using the `seed()` function. Setting the seed to a specific value ensures that the sequence of random numbers generated remains the same across different runs of the program, making the results reproducible.
+
+Example:
+
+```python
+import random
+
+random.seed(123)
+print(random.random())  # Output: 0.052363598850944326
+
+random
+```

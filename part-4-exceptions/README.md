@@ -62,6 +62,19 @@ except Exception as e:
 
 In the example above, the `except` block without specifying a specific exception catches any exception that occurs. The `Exception` class is used to handle the exception, and the error message is printed.
 
+## Else Block
+
+- You can use the `else` keyword to define a block of code to be executed if no errors were raised:
+
+```python
+try:
+  print("Hello")
+except:
+  print("Something went wrong")
+else:
+  print("Nothing went wrong")
+```
+
 ## Finally Block
 
 - The `finally` block can be used to specify cleanup actions that should always be executed, regardless of whether an exception occurred or not.
